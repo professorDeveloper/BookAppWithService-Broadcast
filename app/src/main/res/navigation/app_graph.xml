@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.azamovhudstc.bookappwithcache.ui.screens.auth.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_verifyFragment"
+            app:destination="@id/verifyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.azamovhudstc.bookappwithcache.ui.screens.auth.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_verifyFragment"
+            app:destination="@id/verifyFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment2"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyFragment"
+        android:name="com.azamovhudstc.bookappwithcache.ui.screens.auth.VerifyFragment"
+        android:label="fragment_verify"
+        tools:layout="@layout/fragment_verify">
+        <action
+            android:id="@+id/action_verifyFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.azamovhudstc.bookappwithcache.ui.screens.book.BookScreen"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_addBookScreen"
+            app:destination="@id/addBookScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.azamovhudstc.bookappwithcache.ui.screens.auth.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBookScreen"
+        android:name="com.azamovhudstc.bookappwithcache.ui.screens.book.AddBookScreen"
+        android:label="fragment_add_book_screen"
+        tools:layout="@layout/fragment_add_book_screen" />
+    <fragment
+        android:id="@+id/editBookScreen"
+        android:name="com.azamovhudstc.bookappwithcache.ui.screens.book.EditBookScreen"
+        android:label="EditBookScreen" />
+    <fragment
+        android:id="@+id/showBookScreen"
+        android:name="com.azamovhudstc.bookappwithcache.ui.screens.book.ShowBookScreen"
+        android:label="ShowBookScreen" />
+    <fragment
+        android:id="@+id/exampleForeground"
+        android:name="com.azamovhudstc.bookappwithcache.ExampleForeground"
+        android:label="fragment_example_foreground"
+        tools:layout="@layout/fragment_example_foreground" />
+</navigation>

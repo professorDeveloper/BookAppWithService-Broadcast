@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2_edit"
+            android:elevation="5dp"
+            app:titleTextColor="@color/white"
+            app:title="Edit Book"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/color_blue"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <EditText
+            android:id="@+id/editBookName"
+            android:layout_width="350dp"
+            android:textStyle="bold"
+            android:layout_height="51dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_ed"
+            android:hint="Book Title"
+            android:maxLines="1"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar2_edit" />
+
+        <EditText
+
+            android:textStyle="bold"
+            android:id="@+id/editBookAuthor"
+            android:layout_width="350dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_ed"
+            android:gravity="start|center"
+            android:hint="Athors names"
+            android:maxLines="2"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editBookName" />
+
+        <EditText
+            android:id="@+id/editBookDes"
+            android:layout_width="350dp"
+            android:layout_height="212dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_ed"
+            android:gravity="start"
+            android:textStyle="bold"
+            android:hint="About Book"
+            android:paddingTop="20dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editBookAuthor" />
+
+        <EditText
+            android:id="@+id/editBookPage"
+            android:layout_width="350dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_ed"
+            android:inputType="number"
+            android:hint="Book page"
+
+            android:maxLines="1"
+            android:paddingStart="20dp"
+            android:textStyle="bold"
+            android:paddingEnd="20dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editBookDes" />
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/editBookProgress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/edited"
+            android:layout_width="124dp"
+            android:layout_height="57dp"
+            android:background="?selectableItemBackground"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editBookPage">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="@color/clicked"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp"
+                app:cardMaxElevation="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Edit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

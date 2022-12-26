@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/backBtn"
+        style="@style/BackButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/inputFirstName"
+        style="@style/EditText"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/bg_ed"
+        android:inputType="phone"
+        android:hint="First name"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/lastName"
+        style="@style/EditText"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_ed"
+        android:hint="Last Name "
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputFirstName" />
+
+    <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
+        android:id="@+id/password"
+        style="@style/EditText"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_ed"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputPhone" />
+
+    <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
+        android:id="@+id/inputConfirmPassword"
+        style="@style/EditText"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_ed"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:paddingStart="20dp"
+
+        android:paddingEnd="20dp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <com.vicmikhailau.maskededittext.MaskedEditText
+        android:id="@+id/inputPhone"
+        style="@style/EditText"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_ed"
+        android:hint="@string/_998"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastName"
+        app:mask="@string/_998" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonRegister"
+        style="@style/ActionButton"
+        android:layout_marginBottom="50dp"
+        android:enabled="true"
+        android:text="Ready"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
